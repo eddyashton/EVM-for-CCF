@@ -14,7 +14,7 @@ if [ ! -f "$1" ]
 fi
 
 BASENAME=${1%.sol}
-COMBINED_PATH=${BASENAME}_combined.json
+COMBINED_PATH=${2:-${BASENAME}_combined.json}
 
 # $ solc --version
 # solc, the solidity compiler commandline interface
@@ -22,4 +22,4 @@ COMBINED_PATH=${BASENAME}_combined.json
 
 echo "Writing to ${COMBINED_PATH}"
 
-solc --combined-json abi,bin,bin-runtime,hashes --evm-version homestead --pretty-json --optimize "$1"> "${COMBINED_PATH}"
+solc --combined-json abi,bin,bin-runtime,hashes --evm-version homestead --pretty-json --allow-paths . --optimize "$1"> "${COMBINED_PATH}"
