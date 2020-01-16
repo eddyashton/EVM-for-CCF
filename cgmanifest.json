@@ -1,0 +1,14 @@
+{
+  "Registrations": [
+    {
+      "component": {
+        "type": "git",
+        "git": {
+          "repositoryUrl": "https://github.com/OpenZeppelin/openzeppelin-contracts.git",
+          "commitHash": "cdf655f770cf8412fbd4d6aef3c55194a1233ef1"
+        }
+      }
+    }
+  ],
+  "Version": 1
+}
